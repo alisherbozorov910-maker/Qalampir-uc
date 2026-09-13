@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galaxy UC Shop</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <div id="stars"></div>
+  <header class="topbar">
+    <div class="brand">🚀 Galaxy <span>UC</span></div>
+    <div class="top-actions">
+      <button id="langBtn" class="ghost">RU</button>
+      <button id="logoutBtn" class="ghost hidden" data-i18n="logout">Chiqish</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="authView" class="auth-card">
+      <div class="tabs">
+        <button id="loginTab" class="active" data-i18n="login">Kirish</button>
+        <button id="registerTab" data-i18n="register">Ro‘yxatdan o‘tish</button>
+      </div>
+      <h1 id="authTitle">Galaxy UC</h1>
+      <p class="muted" data-i18n="authSub">PUBG Mobile UC uchun xavfsiz magazin</p>
+      <form id="authForm">
+        <input id="email" type="email" placeholder="Email" required>
+        <input id="password" type="password" placeholder="Parol" minlength="6" required>
+        <button class="primary" type="submit" id="authSubmit">Kirish</button>
+      </form>
+      <button id="forgotBtn" class="linkBtn" data-i18n="forgot">Parolni unutdingizmi?</button>
+      <p id="authMsg" class="msg"></p>
+    </section>
+
+    <section id="appView" class="hidden">
+      <div class="hero glass">
+        <div>
+          <p class="muted" data-i18n="welcome">Xush kelibsiz</p>
+          <h1>Galaxy UC Shop</h1>
+          <p data-i18n="hero">UC xarid qiling, balansni boshqaring va buyurtmalaringizni kuzating.</p>
+        </div>
+        <div class="balance-box">💰 <span data-i18n="balance">Balans</span><strong id="balance">0 so‘m</strong></div>
+      </div>
+
+      <nav class="nav glass">
+        <button class="navBtn active" data-page="shop" data-i18n="shop">UC Magazin</button>
+        <button class="navBtn" data-page="deposit" data-i18n="deposit">Balans to‘ldirish</button>
+        <button class="navBtn" data-page="orders" data-i18n="orders">Buyurtmalar</button>
+        <button class="navBtn" data-page="support" data-i18n="support">Yordam</button>
+        <button class="navBtn hidden" id="adminNav" data-page="admin">⚙️ Admin</button>
+      </nav>
+
+      <section id="shopPage" class="page">
+        <h2 data-i18n="packages">UC paketlari</h2>
+        <div id="packages" class="grid"></div>
+      </section>
+
+      <section id="depositPage" class="page hidden">
+        <div class="glass panel">
+          <h2 data-i18n="depositTitle">Balans to‘ldirish</h2>
+          <p class="muted" data-i18n="depositHelp">Paynet yoki boshqa to‘lov orqali pul yuboring va chek rasmini yuklang.</p>
+          <input id="depositAmount" type="number" min="1000" placeholder="Summa (so‘m)">
+          <input id="depositReceipt" type="file" accept="image/*">
+          <button id="depositBtn" class="primary" data-i18n="sendReceipt">Chekni yuborish</button>
+          <p id="depositMsg" class="msg"></p>
+        </div>
+      </section>
+
+      <section id="ordersPage" class="page hidden">
+        <div class="glass panel">
+          <h2 data-i18n="myOrders">Mening buyurtmalarim</h2>
+          <div id="orders"></div>
+        </div>
+      </section>
+
+      <section id="supportPage" class="page hidden">
+        <div class="glass panel">
+          <h2 data-i18n="supportTitle">Yordam</h2>
+          <textarea id="supportText" rows="5" placeholder="Savolingizni yozing..."></textarea>
+          <button id="supportBtn" class="primary" data-i18n="send">Yuborish</button>
+          <p id="supportMsg" class="msg"></p>
+          <div id="tickets"></div>
+        </div>
+      </section>
+
+      <section id="adminPage" class="page hidden">
+        <div class="glass panel">
+          <h2>⚙️ Admin panel</h2>
+          <div class="admin-grid">
+            <div>
+              <h3>UC paketlari</h3>
+              <input id="ucAmount" type="number" placeholder="UC">
+              <input id="ucPrice" type="number" placeholder="Narx, so‘m">
+              <button id="addPackageBtn" class="primary">Paket qo‘shish</button>
+              <div id="adminPackages"></div>
+            </div>
+            <div>
+              <h3>Cheklar</h3>
+              <div id="adminDeposits"></div>
+            </div>
+            <div>
+              <h3>UC buyurtmalari</h3>
+              <div id="adminOrders"></div>
+            </div>
+            <div>
+              <h3>Yordam xabarlari</h3>
+              <div id="adminTickets"></div>
+            </div>
+          </div>
+          <p id="adminMsg" class="msg"></p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
