@@ -1,11 +1,9 @@
-// Firebase Console > Project settings > General > Your apps > Web app
-// Bu joydagi qiymatlarni O'Z Firebase loyihangizdagi haqiqiy qiymatlar bilan almashtiring.
-
 export const firebaseConfig = {
-  apiKey: "SIZNING_API_KEY",
-  authDomain: "SIZNING_PROJECT_ID.firebaseapp.com",
-  projectId: "SIZNING_PROJECT_ID",
-  storageBucket: "SIZNING_STORAGE_BUCKET",
-  messagingSenderId: "SIZNING_MESSAGING_SENDER_ID",
-  appId: "SIZNING_APP_ID"
+  apiKey: "AIzaSyD62dhTLXVIYR3cnTGylhSL8ckUFME0d-I",
+  authDomain: "galaxy-uc.firebaseapp.com",
+  projectId: "galaxy-uc",
+  storageBucket: "galaxy-uc.firebasestorage.app",
+  messagingSenderId: "285709023145",
+  appId: "1:285709023145:web:d894d9998a950a0178f6b8",
+  measurementId: "G-126DRGR3MT"
 };
